@@ -3,6 +3,7 @@ package lance5057.tDefense.core.tools.armor.cloth;
 import java.util.ArrayList;
 import java.util.List;
 
+import lance5057.tDefense.TinkersCompendium;
 import lance5057.tDefense.core.library.ArmorNBT;
 import lance5057.tDefense.core.library.ArmorTags;
 import lance5057.tDefense.core.library.ArmorTextureBuilder;
@@ -47,9 +48,15 @@ public class TinkersRobe extends ArmorCore {
 
 	@Override
 	public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> subItems) {
-		if (this.isInCreativeTab(tab)) {
-			addDefaultSubItems(subItems, CompendiumMaterials.white.mat, CompendiumMaterials.white.mat, null);
-		}
+	  if(TinkersCompendium.config.armor.enableClothArmor) {
+		  if (this.isInCreativeTab(tab)) {
+			  addDefaultSubItems(subItems, CompendiumMaterials.white.mat, CompendiumMaterials.white.mat, null);
+		  }
+	  } else {
+      if (this.isInCreativeTab(tab)) {
+        addDefaultSubItems(subItems, null, null, null);
+      }     
+    }
 	}
 
 	@Override

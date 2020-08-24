@@ -2,6 +2,7 @@ package lance5057.tDefense.core.tools.armor.heavy;
 
 import java.util.List;
 
+import lance5057.tDefense.TinkersCompendium;
 import lance5057.tDefense.core.library.ArmorNBT;
 import lance5057.tDefense.core.library.ArmorTags;
 import lance5057.tDefense.core.library.ArmorTextureBuilder;
@@ -34,6 +35,7 @@ import slimeknights.tconstruct.library.materials.Material;
 import slimeknights.tconstruct.library.materials.MaterialTypes;
 import slimeknights.tconstruct.library.tinkering.PartMaterialType;
 import slimeknights.tconstruct.library.utils.TagUtil;
+import slimeknights.tconstruct.tools.TinkerMaterials;
 
 public class TinkersSabatons extends ArmorCore {
 	public TinkersSabatons() {
@@ -46,9 +48,16 @@ public class TinkersSabatons extends ArmorCore {
 
 	@Override
 	public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> subItems) {
-		if (this.isInCreativeTab(tab)) {
-			addDefaultSubItems(subItems, null, null, null, null, CompendiumMaterials.white.mat);
-		}
+    if(TinkersCompendium.config.armor.enableHeavyArmor) {
+      if (this.isInCreativeTab(tab)) {
+        addDefaultSubItems(subItems, null, null, null, null,
+            TinkerMaterials.iron);
+      }
+    } else {
+      if (this.isInCreativeTab(tab)) {
+        addDefaultSubItems(subItems, null, null, null, null, null);
+      }     
+    }
 	}
 
 	@Override

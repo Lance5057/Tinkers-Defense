@@ -833,8 +833,10 @@ tile.trapdoor_lead.name=Lead Trapdoor
 tile.trapdoor_steel.name=Steel Trapdoor
 
 //Tools, Armors, & Armorstation Descriptions
-item.fishingrod.desc=Fish big game or little, this modular fishing rod can do nearly everything except get that boot dropped into the water the other day.
+item.fishingRod.name=Fishing Rod
+item.fishingRod.desc=Fish big game or little, this modular fishing rod can do nearly everything except get that boot dropped into the water the other day.
 
+item.shears.name=Shears
 item.shears.desc=Shears are usefull to any farmer looking to have a steady flow of wool, wool for use in crafting or trade for profit.
 
 item.saw.name=Saw
@@ -882,6 +884,12 @@ item.tinkersgrieves.desc=A heavy set of interlocking plates to protect the legs 
 
 item.tinkerssabatons.name=Sabatons
 item.tinkerssabatons.desc=A heavy set of interlocking plates to protect the feet from most damage.
+
+item.tinkerRing.name=Ring
+item.tinkerRing.desc=A precious... precious... bauble.
+
+item.tinkerstabard.name=Tabard
+item.tinkerstabard.desc=A piece of cloth with a symbol on it. Represent!
 
 //Tooltips & Stats
 tooltip.armor.rating=Armor Rating

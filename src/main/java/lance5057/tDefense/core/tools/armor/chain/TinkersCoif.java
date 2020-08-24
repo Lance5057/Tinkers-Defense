@@ -2,6 +2,7 @@ package lance5057.tDefense.core.tools.armor.chain;
 
 import java.util.List;
 
+import lance5057.tDefense.TinkersCompendium;
 import lance5057.tDefense.core.library.ArmorNBT;
 import lance5057.tDefense.core.library.ArmorTags;
 import lance5057.tDefense.core.library.ArmorTextureBuilder;
@@ -29,6 +30,7 @@ import slimeknights.tconstruct.library.materials.Material;
 import slimeknights.tconstruct.library.materials.MaterialTypes;
 import slimeknights.tconstruct.library.tinkering.PartMaterialType;
 import slimeknights.tconstruct.tools.TinkerTools;
+import slimeknights.tconstruct.tools.TinkerMaterials;
 
 public class TinkersCoif extends ArmorCore {
 	public TinkersCoif() {
@@ -40,9 +42,15 @@ public class TinkersCoif extends ArmorCore {
 
 	@Override
 	public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> subItems) {
-		if (this.isInCreativeTab(tab)) {
-			addDefaultSubItems(subItems, null, null, CompendiumMaterials.white.mat);
-		}
+	  if(TinkersCompendium.config.armor.enableChainArmor) {
+		  if (this.isInCreativeTab(tab)) {
+			  addDefaultSubItems(subItems, null, null, TinkerMaterials.iron);
+		  }
+	  } else {
+      if (this.isInCreativeTab(tab)) {
+        addDefaultSubItems(subItems, null, null, null);
+      }	    
+	  }
 	}
 
 	@Override

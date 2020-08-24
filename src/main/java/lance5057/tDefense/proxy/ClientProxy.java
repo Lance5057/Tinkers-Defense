@@ -376,7 +376,7 @@ public class ClientProxy extends CommonProxy {
 			shoesGUI = new ArmorBuildGuiInfo(TDTools.shoes);
 		}
 
-		if (TinkersCompendium.config.armor.enableClothArmor) {
+		if (TinkersCompendium.config.armor.enableChainArmor) {
 			coifGUI = new ArmorBuildGuiInfo(TDTools.coif);
 			hauberkGUI = new ArmorBuildGuiInfo(TDTools.hauberk);
 			chaussesGUI = new ArmorBuildGuiInfo(TDTools.chausses);
@@ -575,25 +575,25 @@ public class ClientProxy extends CommonProxy {
 		}
 
 		if (TinkersCompendium.config.armor.enableChainArmor) {
-			coifGUI.positions.clear();
+		  coifGUI.positions.clear();
 			coifGUI.addSlotPosition(25 - 6, 33 + 5);
 			coifGUI.addSlotPosition(43 - 6, 33 + 5);
 			coifGUI.addSlotPosition(34 - 6, 51 + 5);
 
-			hauberkGUI.positions.clear();
+			if (hauberkGUI.positions != null) hauberkGUI.positions.clear();
 			hauberkGUI.addSlotPosition(28, 33 + 9);
 			hauberkGUI.addSlotPosition(46, 33);
 			hauberkGUI.addSlotPosition(37, 51 + 9);
 			hauberkGUI.addSlotPosition(10, 33);
 			hauberkGUI.addSlotPosition(19, 51 + 9);
 
-			chaussesGUI.positions.clear();
+			if (chaussesGUI.positions != null) chaussesGUI.positions.clear();
 			chaussesGUI.addSlotPosition(25 - 6, 33 + 5);
 			chaussesGUI.addSlotPosition(43 - 6, 33 + 5);
 			chaussesGUI.addSlotPosition(34 - 6, 51 + 5);
 			chaussesGUI.addSlotPosition(34 - 6, 51 + 5 - 36);
 
-			bootsGUI.positions.clear();
+			if (bootsGUI.positions != null) bootsGUI.positions.clear();
 			bootsGUI.addSlotPosition(25 - 6, 33 + 5);
 			bootsGUI.addSlotPosition(34 - 6, 51 + 5);
 			bootsGUI.addSlotPosition(43 - 6, 33 + 5);

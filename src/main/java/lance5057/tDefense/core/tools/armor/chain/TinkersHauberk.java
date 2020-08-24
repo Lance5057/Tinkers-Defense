@@ -28,6 +28,7 @@ import slimeknights.tconstruct.library.materials.HandleMaterialStats;
 import slimeknights.tconstruct.library.materials.Material;
 import slimeknights.tconstruct.library.materials.MaterialTypes;
 import slimeknights.tconstruct.library.tinkering.PartMaterialType;
+import slimeknights.tconstruct.tools.TinkerMaterials;
 
 public class TinkersHauberk extends ArmorCore {
 	public TinkersHauberk() {
@@ -42,7 +43,7 @@ public class TinkersHauberk extends ArmorCore {
 	@Override
 	public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> subItems) {
 		if (this.isInCreativeTab(tab)) {
-			addDefaultSubItems(subItems, null, null, null, CompendiumMaterials.white.mat, null);
+			addDefaultSubItems(subItems, null, null, null, TinkerMaterials.iron, null);
 		}
 	}
 
